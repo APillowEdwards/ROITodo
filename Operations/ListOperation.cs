@@ -59,7 +59,7 @@ namespace ROITodo.Operations
         }
 
         /* Only handles sorting by a single field, could be worth changing the "field" and "direction"
-         * parameters into a single object and passing in a list.         
+         * parameters into a single object and passing in a list of them.
          */
         private void ListSorted(List<ToDoEntry> todos, string field, string direction)
         {
@@ -136,6 +136,8 @@ namespace ROITodo.Operations
         /* The way this method handles the arguments is a little messy. 
          * 
          * It might be worth refactoring this to validate them first, perhaps creating a request object to store them?
+         * 
+         * This could also be worth adding multiple filtering to.
          */
         private void ListFiltered(List<ToDoEntry> todos, string[] args)
         {
