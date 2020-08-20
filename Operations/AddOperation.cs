@@ -21,11 +21,20 @@ namespace ROITodo.Operations
                 return todos;
             }
 
-            // Find the largest Id of a ToDoEntry, and add 1 for the new Id
-            long id = (from todo in todos
-                  orderby todo.Id descending
-                  select todo.Id)
-                 .First() + 1;
+
+            long id;
+            if (todos.Count > 0)
+            {
+                // Find the largest Id of a ToDoEntry, and add 1 for the new Id
+                id = (from todo in todos
+                           orderby todo.Id descending
+                           select todo.Id)
+                     .First() + 1;
+            } else
+            {
+                // If there aren't any todos yet, the id should be 1
+                id = 1;
+            }
 
             string title = args[1];
 
