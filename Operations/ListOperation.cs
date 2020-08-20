@@ -132,7 +132,7 @@ namespace ROITodo.Operations
 
         private void ListFiltered(List<ToDoEntry> todos, string[] args)
         {
-            if (args.Length < 4)
+            if (args.Length < 3)
             {
                 Console.WriteLine("Invalid arguments. The valid format is 'list filter [deadline|done] [gt|lt|done|undone] [date]'");
                 return;
