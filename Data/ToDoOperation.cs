@@ -5,6 +5,11 @@ using System.Text;
 
 namespace ROITodo.Data
 {
+    /**
+     * To add a new operation from the command line, add a new enum value, create an Operation class implementing
+     * IOperation, and add to the switch-case statement in the GetInstance method. 
+     */
+
     public enum ToDoOperation
     {
         add,

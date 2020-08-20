@@ -11,6 +11,7 @@ namespace ROITodo.Data
         private DateTime _deadline;
         private bool _done;
 
+        // Have used properties here in case access to fields needs to be restricted.
         public long Id
         {
             get { return _id; }

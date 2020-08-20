@@ -40,6 +40,8 @@ namespace ROITodo
             SaveToDoEntries(STORAGE_FILE_PATH, todos);
         }
 
+
+        //These load and save the entire list, as it uses a text file containing JSON to persist data.
         private static List<ToDoEntry> LoadToDoEntries(string filePath)
         {
             if (File.Exists(filePath))
